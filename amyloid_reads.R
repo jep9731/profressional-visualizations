@@ -6,16 +6,16 @@ library(readr)
 library(writexl)
 
 # Import data -------------------------------------------------------------
-PET_metrics <- read.csv('/Volumes/fsmresfiles/CNADC/Imaging_Core/Imaging/imaging_projects/Individuals/Joshua_Pasaye/R scripts/amyloid_discrepant_reads/data/AlzheimersDiseaseRes-AmyloidPETmetricsADC_DATA_LABELS_2024-10-28_1324.csv')
+PET_metrics <- read.csv('AlzheimersDiseaseRes-AmyloidPETmetricsADC_DATA_LABELS_2024-10-28_1324.csv')
 nrow(PET_metrics)
 
-ripple <- read.csv('/Volumes/fsmresfiles/CNADC/Imaging_Core/Imaging/imaging_projects/Individuals/Joshua_Pasaye/R scripts/amyloid_discrepant_reads/data/2024-12-09T17_58_12.809Z_clinical_core_export.csv')
+ripple <- read.csv('2024-12-09T17_58_12.809Z_clinical_core_export.csv')
 
-SCAN_aPET_GAAIN <- read.csv('/Volumes/fsmresfiles/CNADC/Imaging_Core/Imaging/imaging_projects/Individuals/Joshua_Pasaye/R scripts/amyloid_discrepant_reads/data/SCAN Amyloid PET (MRI-free) GAAIN analysis data.csv')
+SCAN_aPET_GAAIN <- read.csv('SCAN Amyloid PET (MRI-free) GAAIN analysis data.csv')
 SCAN_aPET_GAAIN
 nrow(SCAN_aPET_GAAIN)
 
-SCAN_aPET_NPDKA <- read.csv('/Volumes/fsmresfiles/CNADC/Imaging_Core/Imaging/imaging_projects/Individuals/Joshua_Pasaye/R scripts/amyloid_discrepant_reads/data/SCAN Amyloid PET (MRI-free) NPDKA analysis data.csv')
+SCAN_aPET_NPDKA <- read.csv('SCAN Amyloid PET (MRI-free) NPDKA analysis data.csv')
 SCAN_aPET_NPDKA
 nrow(SCAN_aPET_NPDKA)
 
@@ -184,5 +184,5 @@ ggplot(data = merged_final, aes(x = mean_SUVr, group = method)) + # Add data and
   )
 
 # Export tables -----------------------------------------------------------
-writexl::write_xlsx(one_clinical_read, "/Volumes/fsmresfiles/CNADC/Imaging_Core/Imaging/imaging_projects/Individuals/Joshua_Pasaye/R scripts/amyloid_discrepant_reads/outputs/one_clinical_read_all.xlsx")
-writexl::write_xlsx(discrepant_reads_final, "/Volumes/fsmresfiles/CNADC/Imaging_Core/Imaging/imaging_projects/Individuals/Joshua_Pasaye/R scripts/amyloid_discrepant_reads/outputs/all visual_quantitative discrepancies.xlsx")
+writexl::write_xlsx(one_clinical_read, "one_clinical_read_all.xlsx")
+writexl::write_xlsx(discrepant_reads_final, "all visual_quantitative discrepancies.xlsx")
