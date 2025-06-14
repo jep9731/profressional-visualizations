@@ -4,7 +4,7 @@ library(readxl)
 library(writexl)
 
 # Import files ------------------------------------------------------------
-mastersheet <- read_excel("/Volumes/fsmresfiles/CNADC/Imaging_Core/imaging_core_docs/Recruitment/IC Goals/Y4/imaging_diagnosis_mastersheet_2024-06-10.xlsx")
+mastersheet <- read_excel("imaging_diagnosis_mastersheet_2024-06-10.xlsx")
 
 # Separating databases ---------------------------------------------------------
 ## MRI
@@ -516,13 +516,13 @@ combined_tables_2 <- combined_tables_2 %>%
 print(combined_tables_2)
 
 # Import data table from IC_goals_Y4.R script and merge data tables from this script
-combined_tables_1 <- read_excel("/Volumes/fsmresfiles/CNADC/Imaging_Core/imaging_core_docs/Recruitment/IC Goals/Y4/tables/never_scanned.xlsx")
+combined_tables_1 <- read_excel("never_scanned.xlsx")
 combined <- merge(combined_tables_1, combined_tables_2, by = "Diagnosis")
 print(combined)
 
 # Export data table to excel ----------------------------------------------
-write_xlsx(combined_tables_2, "/Volumes/fsmresfiles/CNADC/Imaging_Core/imaging_core_docs/Recruitment/IC Goals/Y4/tables/scanned_over_5_or_more_yrs_ago_table.xlsx")
-write_xlsx(combined, "/Volumes/fsmresfiles/CNADC/Imaging_Core/imaging_core_docs/Recruitment/IC Goals/Y4/tables/combined_table.xlsx")
+write_xlsx(combined_tables_2, "scanned_over_5_or_more_yrs_ago_table.xlsx")
+write_xlsx(combined, "combined_table.xlsx")
 write_xlsx(scanned_ppa_id, "/Volumes/fsmresfiles/CNADC/Imaging_Core/imaging_core_docs/Recruitment/IC Goals/Y4/tables/ppa_scanned_over_5_or_more_yrs.xlsx")
 write_xlsx(scanned_elderly_nc_id, "/Volumes/fsmresfiles/CNADC/Imaging_Core/imaging_core_docs/Recruitment/IC Goals/Y4/tables/elderly_age_nc_scanned_over_5_or_more_yrs.xlsx")
 write_xlsx(scanned_middle_age_nc_id, "/Volumes/fsmresfiles/CNADC/Imaging_Core/imaging_core_docs/Recruitment/IC Goals/Y4/tables/middle_age_nc_scanned_over_5_or_more_yrs.xlsx")
