@@ -7,7 +7,7 @@ This repository contains professional data visualizations and analytics related 
 ## 📘 Project Summaries
 
 ### 🧠 `ADC_IC_MRIQC_Y3.ipynb`
-Visualizes MRIQC (MRI Quality Control) group-level metrics for Year 3 imaging data.
+Visualizes MRIQC (MRI Quality Control) group-level metrics for Year 3 of the current grant period (2/1/23-1/31/24) for imaging data.
 
 **Data Files Required:**
 - `group_T1w.tsv`
