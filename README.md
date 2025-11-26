@@ -71,5 +71,3 @@ Merges and harmonizes multiple external amyloid PET datasets from GAAIN and NPDK
 For questions or collaboration inquiries, please contact [Joshua Pasaye](https://github.com/jep9731).
 
 ---
-
-Let me know if you'd like this README formatted for RMarkdown or Jupyter Book, or if you want an automatic file-checking script added for each project!
